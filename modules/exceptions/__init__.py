@@ -1,0 +1,5 @@
+from .course_not_found import CourseNotFoundException
+from .url_undefined import URLUndefinedException
+from .precondition import PreconditionException
+from .service_unavailable import ServiceUnavailableException
+from .directory_not_found import DirectoryNotFoundException

@@ -1,0 +1,263 @@
+[{
+  "_id": {
+    "$oid": "63b786fc3972826b561978fb"
+  },
+  "tag": "greeting",
+  "patterns": [
+    "Hi there",
+    "Is anyone there?",
+    "Hey",
+    "Hola",
+    "Hello",
+    "Good day",
+    "Hi",
+    "Yo"
+  ],
+  "responses": [
+    "Hello",
+    "Hi, good to see you again",
+    "Yo!",
+    "Hi, there"
+  ],
+  "context": [
+    ""
+  ]
+},{
+  "_id": {
+    "$oid": "63b786fc3972826b561978fc"
+  },
+  "tag": "well-being-inquiry",
+  "patterns": [
+    "How are you?",
+    "How are you doing?",
+    "How's it going?",
+    "Are you okay?",
+    "Are you good?"
+  ],
+  "responses": [
+    "I am fine, you?",
+    "Things are good.",
+    "I'm a bot, how should it be going?",
+    "Good. How are you?"
+  ],
+  "context": []
+},{
+  "_id": {
+    "$oid": "63b786fc3972826b561978fd"
+  },
+  "tag": "well-being-response",
+  "patterns": [
+    "I am fine.",
+    "I'm good",
+    "Great!",
+    "I'm doing well.",
+    "I am doing well",
+    "I am good"
+  ],
+  "responses": [
+    "Great! How can I help you?",
+    "Good, is there something I can help with?",
+    "Good to hear. How can I help you?"
+  ],
+  "context": []
+},{
+  "_id": {
+    "$oid": "63b786fc3972826b561978fe"
+  },
+  "tag": "inquiry-response",
+  "patterns": [
+    "I'm not well",
+    "Things are bad",
+    "I'm in trouble"
+  ],
+  "responses": [
+    "I may not be the best source for help. Perhaps you should talk to a counselor."
+  ],
+  "context": []
+},{
+  "_id": {
+    "$oid": "63b786fc3972826b561978ff"
+  },
+  "tag": "goodbye",
+  "patterns": [
+    "Cheers for that",
+    "Cheers",
+    "Bye",
+    "See you later",
+    "Goodbye",
+    "Nice chatting with you, bye",
+    "Till next time",
+    "Farewell"
+  ],
+  "responses": [
+    "See you!",
+    "Have a nice day",
+    "Bye! Come back again soon."
+  ],
+  "context": [
+    ""
+  ]
+},{
+  "_id": {
+    "$oid": "63b786fc3972826b56197900"
+  },
+  "tag": "thanks",
+  "patterns": [
+    "Thanks",
+    "Thank you",
+    "That's helpful",
+    "Awesome, thanks",
+    "Thanks for helping me"
+  ],
+  "responses": [
+    "Happy to help!",
+    "Any time!",
+    "My pleasure"
+  ],
+  "context": [
+    ""
+  ]
+},{
+  "_id": {
+    "$oid": "63b786fc3972826b56197901"
+  },
+  "tag": "noanswer",
+  "patterns": [],
+  "responses": [
+    "Sorry, I don't understand you",
+    "Please give me more info",
+    "Not sure I understand"
+  ],
+  "context": [
+    ""
+  ]
+},{
+  "_id": {
+    "$oid": "63b786fc3972826b56197902"
+  },
+  "tag": "help",
+  "patterns": [
+    "Can you help me?",
+    "Help!",
+    "I don't know what to do",
+    "I need help"
+  ],
+  "responses": [
+    "I can help in these areas: schedule, course information, FAQ",
+    "Indeed, I can help",
+    "Sure, what do you need?"
+  ],
+  "context": [
+    ""
+  ]
+},{
+  "_id": {
+    "$oid": "63b786fc3972826b56197903"
+  },
+  "tag": "schedule_info",
+  "patterns": [
+    "I need schedule information",
+    "I need schedule help",
+    "Can you help me with scheduling?",
+    "Who teaches csc 2310?"
+  ],
+  "responses": [
+    "I can tell you when a course meets, who teaches, and where it is located."
+  ],
+  "context": [
+    ""
+  ]
+},{
+  "_id": {
+    "$oid": "63b786fc3972826b56197904"
+  },
+  "tag": "switch",
+  "patterns": [
+    "Chat with human",
+    "Chat with person",
+    "I need a real person",
+    "Can I talk to my advisor?",
+    "I want to talk to a human",
+    "Can you connect me to my advisor?"
+  ],
+  "responses": [
+    "Let me try to connect you"
+  ],
+  "context": [
+    ""
+  ]
+},{
+  "_id": {
+    "$oid": "63b786fc3972826b56197905"
+  },
+  "tag": "course_info",
+  "patterns": [
+    "I need course information",
+    "I would like course data",
+    "Can you give me course info?",
+    "I'd like some information about a course",
+    "What are the pre-requisites?"
+  ],
+  "responses": [
+    "Okay, hold on.",
+    "Answer this first...",
+    "Sure...wait, I need to ask a few questions."
+  ],
+  "context": [
+    ""
+  ]
+},{
+  "_id": {
+    "$oid": "63b786fc3972826b56197906"
+  },
+  "tag": "enrollment",
+  "patterns": [
+    "When can I enroll for next semester?",
+    "What is my alt pin?"
+  ],
+  "responses": [
+    "Here is the page for enrollment"
+  ],
+  "context": [
+    ""
+  ]
+},{
+  "_id": {
+    "$oid": "63b78de43972826b5619791d"
+  },
+  "tag": "yeet",
+  "patterns": [
+    "nevermind",
+    "exit",
+    "quit",
+    "I didn't mean to do that",
+    "I change my mind"
+  ],
+  "context": [
+    ""
+  ],
+  "responses": [
+    "Okay",
+    "Fine",
+    "Lol, okay"
+  ]
+},{
+  "tag": "directory_info",
+  "patterns": [
+    "I need directory info",
+    "I need an e-mail address",
+    "Can you find a phone number",
+    "What department is",
+    "I need contact info",
+    "Do you have contact info for",
+    "Do you have the e-mail address for",
+    "What is the phone number for"
+  ],
+  "context": [
+    ""
+  ],
+  "responses": [
+    "I'll look it up.",
+    "One moment."
+  ]
+}]

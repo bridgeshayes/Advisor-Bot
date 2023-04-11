@@ -1,0 +1,8 @@
+python-dotenv
+discord.py
+nltk
+# replace the following with tensorflow-macos if on mac
+tensorflow
+pymongo
+numpy
+requests
