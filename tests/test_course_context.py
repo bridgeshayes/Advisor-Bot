@@ -27,6 +27,15 @@ class TestCourseContext(TestCase):
         self.context.get_course_info()
         self.assertEqual("Object-Oriented Prgrming/Dsgn", self.context.title)
 
+    def test_get_diff_subject(self):
+        """
+        Test whether it gets data from a different subject
+        """
+        self.context.subject = "MATH"
+        self.context.course = "2010"
+        self.context.get_course_info()
+        self.assertEqual("Introduction to Linear Algebra", self.context.title)
+
     def test_bad_URI(self):
         # Before running this test, you have to modify the COURSE_SERVICE_URI variable in .env
         self.context.subject = "CSC"
@@ -40,6 +49,15 @@ class TestCourseContext(TestCase):
         """
         self.context.subject = "CSC"
         self.context.course = "0000"
+        with self.assertRaises(CourseNotFoundException) as ex:
+            self.context.get_course_info()
+
+    def test_no_course_exist(self):
+        """
+        Tests whether the input course exists
+        """
+        self.context.subject = "CSC"
+        self.context.course = "2518"
         with self.assertRaises(CourseNotFoundException) as ex:
             self.context.get_course_info()
 
@@ -58,6 +76,15 @@ class TestCourseContext(TestCase):
         """
         self.context.subject = "CSC"
         self.context.course = None
+        with self.assertRaises(PreconditionException) as ex:
+            self.context.get_course_info()
+
+    def test_get_other_parameter_missing(self):
+        """
+        Tests whether the subject and course have been specified
+        """
+        self.context.subject = None
+        self.context.course = "1020"
         with self.assertRaises(PreconditionException) as ex:
             self.context.get_course_info()
 

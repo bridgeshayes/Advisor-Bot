@@ -26,6 +26,30 @@ class TestCourseContext(TestCase):
         self.context.get_directory_info()
         self.assertEqual("jgannod@tntech.edu", self.context.entries[0].email)
 
+    def test_fake_person(self):
+        """
+        Happy path test for a known contact
+        """
+        self.context.query = "Morty Smith"
+        with self.assertRaises(DirectoryNotFoundException) as ex:
+            self.context.get_directory_info()
+
+    def test_phone(self):
+        """
+        Tests if phone extension works
+        """
+        self.context.query = "931-372-3691"
+        self.test_get_directory_info()
+        self.assertEqual("Jerry", self.context.entries[0].firstname)
+
+    def test_email(self):
+        """
+        Tests if email works
+        """
+        self.context.query = "jgannod@tntech.edu"
+        self.test_get_directory_info()
+        self.assertEqual("Jerry", self.context.entries[0].firstname)
+
     def test_get_info_multiple(self):
         """
         Happy path test for query with multiple entries
@@ -47,6 +71,30 @@ class TestCourseContext(TestCase):
         Tests an empty query string
         """
         self.context.query = ""
+        with self.assertRaises(DirectoryNotFoundException) as ex:
+            self.context.get_directory_info()
+
+    def test_get_fake_name(self):
+        """
+        Tests a fake name
+        """
+        self.context.query = "Morty Smith"
+        with self.assertRaises(DirectoryNotFoundException) as ex:
+            self.context.get_directory_info()
+
+    def test_get_fake_email(self):
+        """
+        Tests a fake email
+        """
+        self.context.query = "mortysmith@tntech.edu"
+        with self.assertRaises(DirectoryNotFoundException) as ex:
+            self.context.get_directory_info()
+
+    def test_get_fake_number(self):
+        """
+        Tests a fake phone number
+        """
+        self.context.query = "123-653-0154"
         with self.assertRaises(DirectoryNotFoundException) as ex:
             self.context.get_directory_info()
 
